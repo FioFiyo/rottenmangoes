@@ -1,0 +1,8 @@
+<h1>Admin::Users#index</h1>
+
+<% @users.each do |user|%>
+	<h3> This are the total users: </h3>
+	<ul>
+		<li> <%= user.full_name%></li>
+	</ul>
+<% end %>

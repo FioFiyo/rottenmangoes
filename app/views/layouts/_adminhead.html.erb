@@ -1,0 +1,7 @@
+<header>
+
+	<% if current_user && current_user.is_admin? %>
+		<%= link_to 'admin page', admin_users_path %>
+	<% end %>
+
+</header>
