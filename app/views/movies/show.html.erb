@@ -9,7 +9,7 @@
 </h4>
 <p><%= @movie.description%></p>
 <hr>
-<h3><em>Reviews of <% @movie.title %> </em></h3>
+<h3><em>Reviews of <%= @movie.title %> </em></h3>
 <% if current_user %>
 	<% @movie.reviews.each do |review| %>
 		<p><%= review.text %></p>
