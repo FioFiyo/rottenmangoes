@@ -2,6 +2,7 @@
 
 	<% if current_user && current_user.is_admin? %>
 		<%= link_to 'admin page', admin_users_path %>
+		<%= link_to 'Back home', movies_path %>
 	<% end %>
 
 </header>
