@@ -1,7 +1,7 @@
 class Admin::UsersController < ApplicationController
   
   def index
-  	@users = User.all
+  	@users = User.all.page(params[:page]).per(10)
   	@user = User.find(session[:user_id])
   	unless @user.is_admin?
   	 redirect_to movies_path, notice: 'Access Denied'

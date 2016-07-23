@@ -1,8 +1,18 @@
 <h1>Admin::Users#index</h1>
 
-<h3> This are the total users: </h3>
-<% @users.each do |user|%>
-	<ul>
-		<li> <%= user.full_name%></li>
-	</ul>
-<% end %>
+<h3> All users: </h3>
+<%= paginate @users%>
+
+<table style="width:100%">
+	<tr>
+	<th> Full Name</th>
+	<th> e-mail</th>
+	</tr>
+	<% @users.each do |user|%>
+	<tr>
+		<td><%= user.full_name%> </td>
+		<td><%= user.email%></td>
+	</tr>
+	<% end %>
+</br>
+</table>

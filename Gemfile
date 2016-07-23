@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Use kaminari for pagination
+gem 'kaminari'
 #Use carrierwave for user file uploads :
 #http://www.rubydoc.info/gems/carrierwave/frames
 gem 'carrierwave'
