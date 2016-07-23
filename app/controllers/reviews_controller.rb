@@ -17,6 +17,15 @@ class ReviewsController < ApplicationController
   	end
   end
 
+  def destroy
+    @review = Review.find(params[:id])
+    movie_id = @review.movie_id
+    @review.destroy
+   #specify the controller otherwise it'll try to find the same and create an error
+    redirect_to :controller=>'movie', :action=>'show', :id=>movie_id
+
+  end
+#from #{@user(params[:id]).full_name}
   
 
   protected

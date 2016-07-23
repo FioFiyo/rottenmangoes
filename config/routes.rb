@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :movies do
-  	resources :reviews, only: [:new, :create]
+  	resources :reviews, only: [:new, :create, :destroy]
   end
 
   namespace :admin do

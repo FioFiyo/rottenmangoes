@@ -9,7 +9,10 @@ class Admin::UsersController < ApplicationController
   end
 
   def show
-
+  	@user = User.find(session[:user_id])
+  	unless @user.is_admin?
+  	 redirect_to movies_path, notice: 'Access Denied'
+  	end
   end
 
 
