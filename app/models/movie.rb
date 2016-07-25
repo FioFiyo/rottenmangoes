@@ -21,6 +21,10 @@ class Movie < ApplicationRecord
 		reviews.exists? ? (reviews.sum(:rating_out_of_ten)/reviews.size) : reviews.count
 	end
 
+	def search(search)
+		
+	end
+
 	protected
 	def release_date_is_in_the_past
 		if release_date.present?
